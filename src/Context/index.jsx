@@ -15,11 +15,11 @@ export const StateContextProvider = ({ children }) => {
       method: "GET",
       url: "https://visual-crossing-weather.p.rapidapi.com/forecast",
       params: {
-        aggreegateHours: "24",
+        aggregateHours: "24",
         location: place,
-        ContentType: "json",
+        contentType: "json",
         unitGroup: "metric",
-        shortColumnNames: 0,
+        shortColumnNames: "0",
       },
       headers: {
         "X-RapidAPI-Key": import.meta.env.VITE_API_KEY,
