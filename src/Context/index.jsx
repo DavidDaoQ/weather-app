@@ -5,7 +5,7 @@ const StateContext = createContext();
 
 export const StateContextProvider = ({ children }) => {
   const [weather, setWeather] = useState({});
-  const [values, setVlaues] = useState([]);
+  const [values, setValues] = useState([]);
   const [place, setPlace] = useState("Jaipur");
   const [thisLocation, setLocation] = useState("");
 
@@ -31,7 +31,7 @@ export const StateContextProvider = ({ children }) => {
       console.log(response.data);
       const thisData = Object.values(response.data.locations)[0];
       setLocation(thisData.address);
-      setVlaues(thisData.values);
+      setValues(thisData.values);
       setWeather(thisData.values[0]);
     } catch (e) {
       console.error(e);
@@ -54,6 +54,7 @@ export const StateContextProvider = ({ children }) => {
         setPlace,
         values,
         thisLocation,
+        place,
       }}
     >
       {children}

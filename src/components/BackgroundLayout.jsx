@@ -43,7 +43,7 @@ const BackgroundLayout = () => {
     <img
       src={image}
       alt="weather_image"
-      className="h-screen w-full fixed left-0 top-0 -z-[]"
+      className="h-screen w-full fixed left-0 top-0 -z-[10]"
     />
   );
 };
